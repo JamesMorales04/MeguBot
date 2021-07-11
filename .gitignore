@@ -400,6 +400,9 @@ FodyWeavers.xsd
 .history
 .ionide
 
+#Token
+MeguBOT/config.json
+
 ### VisualStudio ###
 
 # User-specific files
