@@ -25,6 +25,6 @@ Section with all the people who have contributed at least one line of code
 
  - James Morales - Medellín Colombia - jamesmoralesmoreno@gmail.com
 
-License: MIT
+License: GNU GENERAL PUBLIC LICENSE
 
 ![Anuncian una figura basada en Megumin del anime Kono Subarashii Sekai ni  Shukufuku wo! — Kudasai](https://somoskudasai.com/wp-content/uploads/2020/01/portada-megumin-2020.jpg)
