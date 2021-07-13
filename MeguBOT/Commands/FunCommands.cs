@@ -9,28 +9,23 @@ namespace MeguBOT.Commands
     using DSharpPlus.CommandsNext.Attributes;
     using DSharpPlus.Interactivity.Extensions;
 
-    internal class FunCommands : BaseCommandModule
+    internal class FunCommands : BaseCommandsModified
     {
+        // Reference Code not a real funcionality
         [Command("ping")]
         public async Task Ping(CommandContext context)
         {
             await context.Channel.SendMessageAsync("Pong").ConfigureAwait(false);
         }
 
-        [Command("insult")]
-        [Description("Simple test ping command")]
-        public async Task Insult(CommandContext context, [Description("Target name")] string name)
-        {
-            await context.Channel.SendMessageAsync($"{name} Manco de mrd").ConfigureAwait(false);
-        }
-
+        // Reference Code not a real funcionality
         [Command("add")]
-        [Description("Simple test add command")]
         public async Task Add(CommandContext context, [Description("First Number")] int numberOne, int numberTwo)
         {
             await context.Channel.SendMessageAsync((numberOne + numberTwo).ToString()).ConfigureAwait(false);
         }
 
+        // Reference Code not a real funcionality
         [Command("response")]
         public async Task Response(CommandContext context)
         {
@@ -41,6 +36,7 @@ namespace MeguBOT.Commands
             await context.Channel.SendMessageAsync(message.Result.Content);
         }
 
+        // Reference Code not a real funcionality
         [Command("responseEmoji")]
         public async Task ResponseEmoji(CommandContext context)
         {

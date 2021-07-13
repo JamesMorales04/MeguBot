@@ -138,4 +138,10 @@
   <data name="help" xml:space="preserve">
     <value>help ing</value>
   </data>
+  <data name="insult1" xml:space="preserve">
+    <value>Fuck you</value>
+  </data>
+  <data name="insult2" xml:space="preserve">
+    <value>Motherfucker</value>
+  </data>
 </root>

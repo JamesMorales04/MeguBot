@@ -138,4 +138,10 @@
   <data name="help" xml:space="preserve">
     <value>help es</value>
   </data>
+  <data name="insult1" xml:space="preserve">
+    <value>Morite manco de mrd</value>
+  </data>
+  <data name="insult2" xml:space="preserve">
+    <value>Jugador promedio de yasuo</value>
+  </data>
 </root>

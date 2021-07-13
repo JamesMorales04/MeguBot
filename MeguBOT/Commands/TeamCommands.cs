@@ -10,7 +10,7 @@ namespace MeguBOT.Commands
     using DSharpPlus.Entities;
     using DSharpPlus.Interactivity.Extensions;
 
-    internal class TeamCommands : BaseCommandModule
+    internal class TeamCommands : BaseCommandsModified
     {
         [Command("join")]
         public async Task Join(CommandContext context)

@@ -88,6 +88,24 @@ namespace MeguBOT.Lang {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Fuck you.
+        /// </summary>
+        internal static string insult1 {
+            get {
+                return ResourceManager.GetString("insult1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Motherfucker.
+        /// </summary>
+        internal static string insult2 {
+            get {
+                return ResourceManager.GetString("insult2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Join ing.
         /// </summary>
         internal static string join {
