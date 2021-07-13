@@ -1,7 +1,7 @@
 # **MeguBot**
 ![Megumin Konosuba - GaminGuardian](https://gaminguardian.com/wp-content/uploads/2018/08/Megumin-Konosuba.jpg)
 
-Another generalist bot for discord that does not seek to solve any specific problem and is only created for the pure pleasure of doing it, the difference with other bots is that this one has a good name..
+Another generalist bot for discord that does not seek to solve any specific problem and is only created for the pure pleasure of doing it, the difference with other bots is that this one has a good name.
 
 ## Installation
 
