@@ -14,13 +14,14 @@ namespace MeguBOT.Commands
     internal class HelpCommands : BaseHelpFormatter
     {
         private DiscordEmbedBuilder embed;
-        private LangManager langManager;
+        private SystemLang langManager;
 
         public HelpCommands(CommandContext context)
             : base(context)
         {
             this.embed = new DiscordEmbedBuilder();
-            this.langManager = new LangManager("MeguBOT.Lang.Lang", this.GetType().Assembly);
+            this.langManager = SystemLang.GetInstance();
+            context.Channel.SendMessageAsync($"{this.langManager.GetResourceValue("dmhelp")}").ConfigureAwait(false);
         }
 
         public override BaseHelpFormatter WithCommand(Command command)

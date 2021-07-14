@@ -117,31 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ping" xml:space="preserve">
-    <value>Pong ing</value>
-  </data>
-  <data name="add" xml:space="preserve">
-    <value>Add ing</value>
-  </data>
   <data name="insult" xml:space="preserve">
-    <value>Insult ing</value>
-  </data>
-  <data name="response" xml:space="preserve">
-    <value>Response ing</value>
-  </data>
-  <data name="responseemoji" xml:space="preserve">
-    <value>Response Emoji Ing</value>
-  </data>
-  <data name="join" xml:space="preserve">
-    <value>Join ing</value>
+    <value>Insult the person mentioned &lt;@name&gt; or drop a random insult.</value>
   </data>
   <data name="help" xml:space="preserve">
-    <value>help ing</value>
+    <value>Shows you the different command alternatives that MeguBot has.</value>
   </data>
   <data name="insult1" xml:space="preserve">
     <value>Fuck you</value>
   </data>
   <data name="insult2" xml:space="preserve">
     <value>Motherfucker</value>
+  </data>
+  <data name="insult3" xml:space="preserve">
+    <value>N word</value>
+  </data>
+  <data name="langChange" xml:space="preserve">
+    <value>The language has been successfully changed to</value>
+  </data>
+  <data name="langconf" xml:space="preserve">
+    <value>Language change command</value>
+  </data>
+  <data name="badlang" xml:space="preserve">
+    <value>The entered language is not supported, the supported languages are: [en, en].</value>
+  </data>
+  <data name="en" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="es" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="dmhelp" xml:space="preserve">
+    <value>Support goes directly to your DM.</value>
   </data>
 </root>

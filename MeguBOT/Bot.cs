@@ -82,8 +82,7 @@ namespace MeguBOT
             this.Commands = this.Client.UseCommandsNext(commandsConfig);
             this.Commands.SetHelpFormatter<HelpCommands>();
             this.Commands.RegisterCommands<BasicTextBasedInteractions>();
-            this.Commands.RegisterCommands<FunCommands>();
-            this.Commands.RegisterCommands<TeamCommands>();
+            this.Commands.RegisterCommands<ConfigCommands>();
         }
 
         private Task OnClientReady(object sender, ReadyEventArgs e)
