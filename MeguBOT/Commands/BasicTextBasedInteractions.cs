@@ -22,7 +22,13 @@ namespace MeguBOT.Commands
         [Command("insult")]
         public async Task Insult(CommandContext context, DiscordMember member)
         {
-            await context.Channel.SendMessageAsync($"{member.Mention} {this.LangManager.GetResourceValue($"insult{this.randomNumber.Next(1, 3)}")}").ConfigureAwait(false);
+            await context.Channel.SendMessageAsync($"{member.Mention} {this.LangManager.GetResourceValue($"insult{this.randomNumber.Next(1, 4)}")}").ConfigureAwait(false);
+        }
+
+        [Command("insult")]
+        public async Task Insult(CommandContext context)
+        {
+            await context.Channel.SendMessageAsync($"{this.LangManager.GetResourceValue($"insult{this.randomNumber.Next(1, 4)}")}").ConfigureAwait(false);
         }
     }
 }

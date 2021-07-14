@@ -61,16 +61,43 @@ namespace MeguBOT.Lang {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Add ing.
+        ///   Busca una cadena traducida similar a The entered language is not supported, the supported languages are: [en, en]..
         /// </summary>
-        internal static string add {
+        internal static string badlang {
             get {
-                return ResourceManager.GetString("add", resourceCulture);
+                return ResourceManager.GetString("badlang", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a help ing.
+        ///   Busca una cadena traducida similar a Support goes directly to your DM..
+        /// </summary>
+        internal static string dmhelp {
+            get {
+                return ResourceManager.GetString("dmhelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a English.
+        /// </summary>
+        internal static string en {
+            get {
+                return ResourceManager.GetString("en", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Spanish.
+        /// </summary>
+        internal static string es {
+            get {
+                return ResourceManager.GetString("es", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Shows you the different command alternatives that MeguBot has..
         /// </summary>
         internal static string help {
             get {
@@ -79,7 +106,7 @@ namespace MeguBOT.Lang {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Insult ing.
+        ///   Busca una cadena traducida similar a Insult the person mentioned &lt;@name&gt; or drop a random insult..
         /// </summary>
         internal static string insult {
             get {
@@ -106,38 +133,29 @@ namespace MeguBOT.Lang {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Join ing.
+        ///   Busca una cadena traducida similar a N word.
         /// </summary>
-        internal static string join {
+        internal static string insult3 {
             get {
-                return ResourceManager.GetString("join", resourceCulture);
+                return ResourceManager.GetString("insult3", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Pong ing.
+        ///   Busca una cadena traducida similar a The language has been successfully changed to.
         /// </summary>
-        internal static string ping {
+        internal static string langChange {
             get {
-                return ResourceManager.GetString("ping", resourceCulture);
+                return ResourceManager.GetString("langChange", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Response ing.
+        ///   Busca una cadena traducida similar a Language change command.
         /// </summary>
-        internal static string response {
+        internal static string langconf {
             get {
-                return ResourceManager.GetString("response", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Response Emoji Ing.
-        /// </summary>
-        internal static string responseemoji {
-            get {
-                return ResourceManager.GetString("responseemoji", resourceCulture);
+                return ResourceManager.GetString("langconf", resourceCulture);
             }
         }
     }

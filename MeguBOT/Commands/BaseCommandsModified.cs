@@ -11,9 +11,10 @@ namespace MeguBOT.Commands
     {
         public BaseCommandsModified()
         {
-            this.LangManager = new LangManager("MeguBOT.Lang.Lang", this.GetType().Assembly);
+            this.LangManager = SystemLang.GetInstance();
         }
 
-        public LangManager LangManager { get; private set; }
+        public SystemLang LangManager { get; private set; }
+
     }
 }
