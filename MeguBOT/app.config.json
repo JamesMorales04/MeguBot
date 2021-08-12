@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    "Redis": "redis:6379",
+    "MongoDB": "mongodb://root:example@mongo:27017/"
+  }
+}
