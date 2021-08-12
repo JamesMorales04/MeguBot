@@ -15,6 +15,5 @@ namespace MeguBOT.Commands
         }
 
         public SystemLang LangManager { get; private set; }
-
     }
 }

@@ -1,4 +1,8 @@
-﻿namespace MeguBOT.Lang
+﻿// <copyright file="SystemLang.cs" company="DarkFlame Software">
+// Copyright (c) DarkFlame Software. All rights reserved.
+// </copyright>
+
+namespace MeguBOT.Lang
 {
     using System.Collections;
     using System.Linq;
