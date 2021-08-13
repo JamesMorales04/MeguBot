@@ -32,5 +32,10 @@ namespace MeguBOT.Services.MongoDB.Implementation
             MongoClientSettings settings = MongoClientSettings.FromConnectionString(connectionString);
             this.mongoClient = new MongoClient(settings);
         }
+
+        public IMongoDatabase GetMeguBotDatabase()
+        {
+            return this.mongoClient.GetDatabase("MeguBot");
+        }
     }
 }
