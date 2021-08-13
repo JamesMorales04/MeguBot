@@ -4,19 +4,21 @@
 
 namespace MeguBOT.Lang
 {
-    using System.Collections;
-    using System.Linq;
+    using System;
     using System.Resources;
+    using MeguBOT.Database.LangDB;
 
     internal class SystemLang
     {
         private static SystemLang instance;
 
+        private LangDB langDB;
         private System.Globalization.CultureInfo currentSystemLang;
 
         private SystemLang()
         {
-            this.currentSystemLang = new System.Globalization.CultureInfo("es");
+            this.langDB = new LangDB();
+            this.langDB.SaveAllGuildLangsOnRedis();
             this.ResourceManager = new ResourceManager("MeguBOT.Lang.Lang", this.GetType().Assembly);
         }
 
@@ -32,19 +34,16 @@ namespace MeguBOT.Lang
             return instance;
         }
 
-        public void ChangeLang(string lang)
+        public void ChangeLang(string guildID, string lang)
         {
+            this.langDB.ModifyServerLang(guildID, lang);
+        }
+
+        public string GetResourceValue(string guildID, string name)
+        {
+            string lang = this.langDB.GetServerLang(guildID);
             this.currentSystemLang = new System.Globalization.CultureInfo(lang);
-        }
 
-        public string GetResourceName(string value)
-        {
-            DictionaryEntry entry = this.ResourceManager.GetResourceSet(this.currentSystemLang, true, true).OfType<DictionaryEntry>().FirstOrDefault(dictionaryEntry => dictionaryEntry.Value.ToString() == value);
-            return entry.Key.ToString();
-        }
-
-        public string GetResourceValue(string name)
-        {
             string value = this.ResourceManager.GetString(name, this.currentSystemLang);
             return !string.IsNullOrEmpty(value) ? value : null;
         }

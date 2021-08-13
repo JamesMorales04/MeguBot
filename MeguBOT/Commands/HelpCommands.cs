@@ -15,18 +15,20 @@ namespace MeguBOT.Commands
     {
         private DiscordEmbedBuilder embed;
         private SystemLang langManager;
+        private string guildID;
 
         public HelpCommands(CommandContext context)
             : base(context)
         {
+            this.guildID = context.Guild.Id.ToString();
             this.embed = new DiscordEmbedBuilder();
             this.langManager = SystemLang.GetInstance();
-            context.Channel.SendMessageAsync($"{this.langManager.GetResourceValue("dmhelp")}").ConfigureAwait(false);
+            context.Channel.SendMessageAsync($"{this.langManager.GetResourceValue(this.guildID, "dmhelp")}").ConfigureAwait(false);
         }
 
         public override BaseHelpFormatter WithCommand(Command command)
         {
-            this.embed.AddField(command.Name, this.langManager.GetResourceValue(command.Name));
+            this.embed.AddField(command.Name, this.langManager.GetResourceValue(this.guildID, command.Name));
             return this;
         }
 
@@ -34,7 +36,7 @@ namespace MeguBOT.Commands
         {
             foreach (var command in commands)
             {
-                this.embed.AddField(command.Name, this.langManager.GetResourceValue(command.Name));
+                this.embed.AddField(command.Name, this.langManager.GetResourceValue(this.guildID, command.Name));
             }
 
             return this;

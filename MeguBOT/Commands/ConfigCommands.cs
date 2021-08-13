@@ -13,18 +13,20 @@ namespace MeguBOT.Commands
         [Command("langconf")]
         public async Task Lang(CommandContext context, string lang)
         {
+            string guildID = context.Guild.Id.ToString();
+
             switch (lang)
             {
                 case "es":
-                    this.LangManager.ChangeLang(lang);
-                    await context.Channel.SendMessageAsync($"{this.LangManager.GetResourceValue("langChange")} {this.LangManager.GetResourceValue(lang)}").ConfigureAwait(false);
+                    this.LangManager.ChangeLang(guildID, lang);
+                    await context.Channel.SendMessageAsync($"{this.LangManager.GetResourceValue(guildID, "langChange")} {this.LangManager.GetResourceValue(guildID, lang)}").ConfigureAwait(false);
                     break;
                 case "en":
-                    this.LangManager.ChangeLang(lang);
-                    await context.Channel.SendMessageAsync($"{this.LangManager.GetResourceValue("langChange")} {this.LangManager.GetResourceValue(lang)}").ConfigureAwait(false);
+                    this.LangManager.ChangeLang(guildID, lang);
+                    await context.Channel.SendMessageAsync($"{this.LangManager.GetResourceValue(guildID, "langChange")} {this.LangManager.GetResourceValue(guildID, lang)}").ConfigureAwait(false);
                     break;
                 default:
-                    await context.Channel.SendMessageAsync($"{this.LangManager.GetResourceValue("badlang")}").ConfigureAwait(false);
+                    await context.Channel.SendMessageAsync($"{this.LangManager.GetResourceValue(guildID, "badlang")}").ConfigureAwait(false);
                     break;
             }
         }
