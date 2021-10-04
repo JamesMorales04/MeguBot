@@ -1,6 +1,10 @@
 {
   "ConnectionStrings": {
-    "Redis": "redis:6379",
-    "MongoDB": "mongodb://root:example@mongo:27017/"
+    // "MongoDB": "Your connection string",
+    "Redis": "localhost:6379"
+  },
+  "BotSettings": {
+    // "token": "Your bot token",
+    "prefix": "?"
   }
 }

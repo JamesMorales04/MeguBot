@@ -13,6 +13,5 @@ FROM base AS final
 RUN sed -i 's/main/main contrib/g' /etc/apt/sources.list
 RUN apt-get update
 WORKDIR /app
-COPY "config.json" /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet",  "MeguBOT.dll"]
