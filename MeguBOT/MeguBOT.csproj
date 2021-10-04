@@ -3,7 +3,14 @@
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net5.0</TargetFramework>
+		<UserSecretsId>e979a8bf-09be-4fff-bd45-32614f9169ab</UserSecretsId>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\contentFiles\any\netstandard2.1\Core\Compression\Snappy\lib\win\snappy32.dll" />
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\contentFiles\any\netstandard2.1\Core\Compression\Snappy\lib\win\snappy64.dll" />
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\contentFiles\any\netstandard2.1\Core\Compression\Zstandard\lib\win\libzstd.dll" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<None Remove="stylecop.json" />
@@ -19,11 +26,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="BooruSharp" Version="3.0.3" />
+		<PackageReference Include="BooruSharp.Others" Version="2.2.0" />
 		<PackageReference Include="DSharpPlus" Version="4.1.0" />
 		<PackageReference Include="DSharpPlus.CommandsNext" Version="4.1.0" />
 		<PackageReference Include="DSharpPlus.Interactivity" Version="4.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0-preview.7.21377.19" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0-preview.7.21377.19" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
 		<PackageReference Include="MongoDB.Bson" Version="2.13.1" />
 		<PackageReference Include="MongoDB.Driver" Version="2.13.1" />
 		<PackageReference Include="MongoDB.Driver.Core" Version="2.13.1" />
@@ -35,7 +45,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="Lang\Lang.Designer.cs">
+		<Compile Update="Domain\Lang\Lang.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 			<DependentUpon>Lang.resx</DependentUpon>
@@ -43,7 +53,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Update="Lang\Lang.resx">
+		<EmbeddedResource Update="Domain\Lang\Lang.resx">
 			<Generator>ResXFileCodeGenerator</Generator>
 			<LastGenOutput>Lang.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
@@ -53,9 +63,42 @@
 		<None Update="app.config.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="config.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/libzstd.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/snappy64.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/snappy32.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/libzstd.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/snappy64.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/snappy32.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/libzstd.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\james\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/snappy64.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Domain\Interfaces\Bot\Commands\" />
 	</ItemGroup>
 
 </Project>

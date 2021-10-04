@@ -3,28 +3,14 @@
 // </copyright>
 namespace MeguBOT
 {
-    using MeguBOT.Configurations.AppConfig;
-    using MeguBOT.Services.MongoDB.Implementation;
-    using MeguBOT.Services.Redis.Implementation;
-    using Microsoft.Extensions.Configuration;
-
     public class MeguBot
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            ServicesConfiguration();
-            Bot bot = new Bot();
-            bot.RunAsync().GetAwaiter().GetResult();
-        }
+            Startup setup = new();
+            BotCore bot = new();
 
-        private static void ServicesConfiguration()
-        {
-            Configuration config = Configuration.Instance;
-            RedisConnectionService redisServer = RedisConnectionService.Instance;
-            MongoDBService mongoService = MongoDBService.Instance;
-
-            redisServer.SetRedisConnection(config.GetConfiguration().GetConnectionString("Redis"));
-            mongoService.SetConnection(config.GetConfiguration().GetConnectionString("MongoDB"));
+            bot.RunAsync(setup.Configuration, setup.Services).GetAwaiter().GetResult();
         }
     }
 }

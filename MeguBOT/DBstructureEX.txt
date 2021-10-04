@@ -1,0 +1,13 @@
+database discord
+
+Collection guilds 
+
+Guild
+}
+ guild: id
+ lang: string
+ members member[]
+ {
+   memberid: id
+ }
+}
