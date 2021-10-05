@@ -23,12 +23,12 @@ namespace MeguBOT.Commands
             this.guildID = context.Guild.Id.ToString();
             this.embed = new DiscordEmbedBuilder();
 
-            this.LangManager = (SystemLang)context.Services.GetService(typeof(ILang));
+            this.LangManager = (ILang)context.Services.GetService(typeof(ILang));
 
             context.Channel.SendMessageAsync($"{this.LangManager.GetResourceValue(this.guildID, "dmhelp")}").ConfigureAwait(false);
         }
 
-        public SystemLang LangManager { private get; set; }
+        public ILang LangManager { private get; set; }
 
         public override BaseHelpFormatter WithCommand(Command command)
         {
