@@ -4,9 +4,9 @@
 
 namespace MeguBOT.Lang
 {
+    using System.Resources;
     using MeguBOT.Domain.Interfaces.Database;
     using MeguBOT.Domain.Interfaces.Lang;
-    using System.Resources;
 
     public class SystemLang : ILang
     {
